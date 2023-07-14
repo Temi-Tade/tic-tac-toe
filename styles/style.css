@@ -1,0 +1,163 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	letter-spacing: .5px;
+}
+
+:root{
+	--borad: .5rem;
+	--light: #eee;
+	--dark: #252525;
+	--fsize_big: 1.5rem;
+	--fsize_med: 1rem;
+	--fsize_small: .75rem;
+	--primary: #2995D5;
+}
+
+html{
+	font-family: Ubuntu, sans-serif;
+	font-size: 1.2rem;
+	user-select: none;
+	-ms-user-select: none;
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	background: var(--light);
+}
+
+#modal-bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #777c;
+	padding-top: 5rem;
+}
+
+#modal{
+	width: 80%;
+	background: var(--light);
+	border-radius: var(--borad);
+	padding: 1rem;
+	margin: auto;
+}
+
+#modal h3{
+	text-align: center
+}
+
+button{
+	border: 0;
+	background: var(--primary);
+	color: var(--light);
+	padding: .5rem;
+	border-radius: var(--borad);
+	font-size: var(--fsize_med);
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: .5s;
+}
+
+button:focus{
+	background: #1677B1;
+	border: 1px solid var(--primary);
+}
+
+label{
+	display: flex;
+	margin: .2rem 0 .5rem;
+	font-weight: 350;
+	border: 1px solid;
+	padding: .25rem;
+	align-items: center;
+	justify-content: space-between
+}
+
+input{
+	display: inline-block;
+}
+
+input[type=text]{
+	border: 1.5px solid var(--primary);
+	padding: .5rem;
+	font-size: var(--fsize_med);
+	border-radius: var(--borad);
+	background: transparent;
+}
+
+input[type=color]{
+	width: 3rem;
+	border: 0;
+	height: 2rem;
+}
+
+input:focus{
+	outline: 0;
+	box-shadow: 0 0 2px 1px var(--primary)
+}
+
+#gamemode_wrap{
+	display: flex;
+	padding: .5rem;
+	justify-content: space-evenly
+}
+
+#gamemode_wrap button{
+	display: block;
+	
+}
+
+button.backBtn{
+	background: transparent;
+	color: var(--primary);
+	font-size: var(--fsize_small);
+	font-weight: 400;
+	display: block;
+	margin: 0 0 .5rem 0;
+}
+
+#gamepiece-wrap{
+	display: flex;
+	padding: 0 .25rem;
+	width: 6rem;
+	justify-content: space-between
+}
+
+#gamepiece-wrap label{
+	display: flex;
+	padding: .5rem;
+	width: 2.5rem;
+	height: 2.5rem;	
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bolder;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--borad);
+}
+
+#gamepiece-wrap input {
+	display: none;
+}
+
+#gamepiece-wrap span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: var(--borad);
+}
+
+#gamepiece-wrap input:checked + span{
+	background: var(--primary);
+	transition: .5s;
+	color: var(--light);
+}

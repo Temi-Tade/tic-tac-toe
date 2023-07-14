@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+	<main>
+		<div id="modal-bg">
+			<div id="modal">
+				<!--font awesome for player icon-->
+				<h3>Select Game Mode</h3>
+				<ul type="none" id="gamemode_wrap">
+					<li>
+						<button onclick="singlePlayerGameMode()">One Player</button>
+					</li>
+					
+					<li>
+						<button onclick="multiPlayerGameMode()">Two Players</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<section id="game-wrap">
+			<div id="scores">
+				<div id="player1"></div>
+				<div id="player2"></div>
+			</div>
+			
+			<div id="board"></div>
+		</section>
+	</main>
+	<script src="./scripts/game.js"></script>
+	<script src="./scripts/main.js"></script>
+</body>
+</html>
