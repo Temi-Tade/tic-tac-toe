@@ -73,10 +73,10 @@ label{
 	display: flex;
 	margin: .2rem 0 .5rem;
 	font-weight: 350;
-	border: 1px solid;
 	padding: .25rem;
 	align-items: center;
-	justify-content: space-between
+	justify-content: space-between;
+	width: 100%;
 }
 
 input{
@@ -89,12 +89,9 @@ input[type=text]{
 	font-size: var(--fsize_med);
 	border-radius: var(--borad);
 	background: transparent;
-}
-
-input[type=color]{
-	width: 3rem;
-	border: 0;
-	height: 2rem;
+	display: block;
+	width: 80%;
+	margin: auto;
 }
 
 input:focus{
@@ -160,4 +157,10 @@ button.backBtn{
 	background: var(--primary);
 	transition: .5s;
 	color: var(--light);
+}
+
+.field{
+	display: flex;
+	justify-content: space-between;
+	align-items: center
 }
