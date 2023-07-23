@@ -1,5 +1,3 @@
-let form = document.querySelector('#player_details')
-
 const gameModeScreen = `
 	<!--font awesome for player icon-->
 	<h3>Select Game Mode</h3>
@@ -58,11 +56,27 @@ let createModal = (text) => {
 
 let singlePlayerGameMode = () => {
 	createModal(singlePlayerScreen)
+	let form = document.querySelector('#player_details')
+	form.onsubmit = (e) => {
+		e.preventDefault()
+		let player = new Player(document.querySelector('#playerName').value, 'x', 0, true)
+		let cpu = new Player('cpu', 'o', 0, false)
+		createGame()
+	}
 }
 
 let multiPlayerGameMode = () => {
 	createModal(multiPlayerScreen)
 }
 
-
-uri
+const createGame = (p1_name, p2_name) => {
+	const createGameScreen = `
+		<div id='gamescreen_wrap'>
+			<div id='p1'>${p1_name}</div>
+			<div>vs</div>
+			<div id='p2'>${p2_name}</div>
+		</div>
+		<button id='startGameBtn'>start game</button>
+	`
+	createModal(createGameScreen)
+}
